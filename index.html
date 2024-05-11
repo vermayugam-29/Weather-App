@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Images/cloud.png" type="image/x-icon">
+    <title>Weather App</title>
+</head>
+<body class="bg-gradient-to-r from-blue-600 to-blue-900 text-white text-opacity-70">
+    <div class="flex flex-col items-center">
+        <h1 class="font-bold text-5xl">WEATHER APP</h1>
+    </div>
+    <div class="flex flex-col items-center gap-2 mt-[100px]">
+
+        <div class="flex flex-row gap-20 w-1/2 justify-between">
+            <button id="your-weather" >
+                Your weather
+            </button>
+            <button id="search-btn" class="">
+                Search Weather
+            </button>
+        </div>
+
+
+        <form id="search-bar" class="flex flex-row justify-center w-1/2 space-x-4 opacity-0">
+            <input type="text" placeholder="Search for a city...." id="search"
+             class="rounded-lg w-3/4 bg-white bg-opacity-30 placeholder-white placeholder-opacity-70 pl-4 ">
+            <button loading="lazy"
+             class="flex flex-col items-center justify-center w-[40px] h-[40px] rounded-full bg-white bg-opacity-30">
+                <img src="Images/search.png" alt="" class="w-1/2 h-1/2">
+            </button>
+        </form>
+        <div class="flex flex-col relative w-full items-center" id="parentDiv">
+            
+            
+            
+            <!-- Loading image -->
+            <div id="loading" class="opacity-0 absolute w-1/2">
+                <div class="flex flex-col items-center">
+                    <img src="Images/loading.gif" alt="" class="w-1/2 h-1/2">
+                </div>
+            </div>
+            
+            <div id="error" class="w-1/2 flex flex-col items-center opacity-0 absolute">
+                <img src="Images/not-found.png" alt="" class="w-1/2 h-1/2">
+            </div>
+            
+            <div id="output" class="absolute opacity-0 w-full">
+                <div class="flex flex-col items-center gap-10">
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="w-1/2 flex flex-row items-center gap-4">
+                            <h1 id="cityName" class="text-4xl"></h1>
+                            <img src="" alt="" id="flag" class="w-1/4">
+                        </div>
+                        <h1 id="weatherType" class="text-2xl"></h1>
+                        <img src="" alt="copy" id="imageChange" class="w-1/4 h-1/2">
+                        <h1 class="text-6xl font-semibold" id="tempDisplay">13</h1>
+                    </div>
+    
+    
+                    <div class="flex flex-row space-x-4 w-1/2">
+                        <div class="flex flex-col bg-white bg-opacity-30 rounded-xl items-center w-3/4 h-1/2">
+                            <img src="Images/wind.png" alt="" class="w-1/2 h-1/2">
+                            <h1 class="text-2xl">WINDSPEED</h1>
+                            <p class="text-2xl" id="speed">2.33</p>
+                        </div>
+                        <div class="flex flex-col bg-white bg-opacity-30 rounded-xl items-center w-3/4 h-1/2">
+                            <img src="Images/humidity.png" alt="" class="w-1/2 h-1/2">
+                            <h1 class="text-2xl">HUMIDITY</h1>
+                            <p class="text-2xl" id="humid">45</p>
+                        </div>
+                        <div class="flex flex-col bg-white bg-opacity-30 rounded-xl items-center w-3/4 h-1/2">
+                            <img src="Images/cloud.png" alt="" class="w-1/2 h-1/2">
+                            <h1 class="text-2xl">CLOUDS</h1>
+                            <p class="text-2xl" id="cloud">34</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!--Div for Grant location -->
+            <div id="grant-location" class="opacity-100 absolute w-full">
+                <div class="flex flex-col items-center gap-9" id="grant-location">
+                    <img class="w-1/6"
+                     loading="lazy" src="./Images/location.png" alt="">
+    
+                    <div>
+                        <p class="font-bold text-3xl">Grant Location Access</p>
+                        <p class="text-xl">Allow access to get weather location</p>
+                    </div>
+    
+                    <button id="grant-access" 
+                    class="font-medium rounded-lg border-gray-500 w-[120px] h-[36px] 
+                    bg-white bg-opacity-30">
+                        Grant Access
+                    </button>
+                </div>
+    
+            </div>
+
+
+            
+            <!-- ----------------------------- -->
+        </div>
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
