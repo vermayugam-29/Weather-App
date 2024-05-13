@@ -54,6 +54,7 @@ searchBtn.addEventListener('click' , () => {
 
 yourWeather.addEventListener('click' , () => {
     changeOpacity(output,0);
+    changeOpacity(loading,0);
     changeOpacity(err,0)
     changeOpacity(searchBarForm,0);
     getOldCords();
