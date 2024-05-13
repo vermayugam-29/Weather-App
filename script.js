@@ -53,9 +53,10 @@ searchBtn.addEventListener('click' , () => {
 })
 
 yourWeather.addEventListener('click' , () => {
-    getOldCords();
-    changeOpacity(searchBarForm,0);
+    changeOpacity(output,0);
     changeOpacity(err,0)
+    changeOpacity(searchBarForm,0);
+    getOldCords();
     yourWeather.classList.add('changeBtn');
     searchBtn.classList.remove('changeBtn')
 })
